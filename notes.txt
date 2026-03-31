@@ -1,0 +1,2 @@
+BitGN PAC is a benchmark for personal and trustworthy autonomous agents.
+The agent should act safely, avoid hallucinations, and use tools deliberately.

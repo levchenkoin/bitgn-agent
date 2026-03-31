@@ -7,10 +7,10 @@ load_dotenv()
 
 @dataclass
 class Settings:
-    bitgn_api_key: str = os.getenv("BITGN_API_KEY", "")
-    bitgn_base_url: str = os.getenv("BITGN_BASE_URL", "https://api.bitgn.com")
     openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
     model_name: str = os.getenv("MODEL_NAME", "gpt-4.1-mini")
+    bitgn_api_key: str = os.getenv("BITGN_API_KEY", "")
+    bitgn_base_url: str = os.getenv("BITGN_BASE_URL", "")
     max_steps: int = 12
     stagnation_limit: int = 3
 

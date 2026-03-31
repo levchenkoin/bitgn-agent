@@ -6,10 +6,22 @@ from models import Task
 def load_demo_task() -> Task:
     return Task(
         task_id="demo-1",
-        instruction="Read the task and use available tools safely.",
-        context={"source": "local_demo"},
+        instruction="Read the file named notes.txt and summarize its content.",
+        context={
+            "source": "local_demo",
+            "files": [
+                {
+                    "name": "notes.txt",
+                    "path": "notes.txt",
+                    "description": "A demo text file for the agent to read"
+                }
+            ]
+        },
         available_tools=[
-            {"name": "read_file", "description": "Read a file safely"},
+            {
+                "name": "read_file",
+                "description": "Read a file safely"
+            },
         ],
         output_requirements={
             "must_include_references": False,
